@@ -4,7 +4,7 @@
 
 ### Install
 
-Download and install [expo xde](https://github.com/expo/xde)
+Download and install [expo xde](https://docs.expo.io/versions/v15.0.0/introduction/installation.html)
 
 In a terminal, execute
 ```
