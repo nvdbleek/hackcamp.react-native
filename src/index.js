@@ -16,4 +16,4 @@ const wrongApp = () =>
     <Text style={{transform: [{rotate: '90deg'}], fontSize: 200}}>:(</Text>
   </View>;
 
-export default wrongApp;
+export default App;

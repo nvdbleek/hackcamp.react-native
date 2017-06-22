@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {View} from "react-native";
+import {View, Text} from "react-native";
 import {TruckListScreen} from "./screens/TruckList/TruckListScreen";
 import {globalStyles} from "./styles/globalStyles";
 import {TruckFormScreen} from "./screens/TruckForm/TruckFormScreen";
@@ -25,8 +25,10 @@ class _Main extends Component {
         break;
     }
     return (
-        <TruckSocket/>
-        {screen};
+        <View style={globalStyles.container}>
+          <TruckSocket/>
+          {screen}
+        </View>);
   }
 }
 

@@ -15,4 +15,13 @@ import {TOGGLE_TRUCK} from "../actions/trucks";
 
 export const initialState = {};
 
-export const activeTrucks = 'mmhhhh...';
+export const activeTrucks = (state = initialState, action) => {
+    switch(action.type) {
+        case TOGGLE_TRUCK:
+            const newState =  {...state, };
+            newState[action.payload.uuid] = !newState[action.payload.uuid];
+            return newState;
+        default:
+            return initialState;
+    }
+};
