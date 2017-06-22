@@ -5,7 +5,6 @@ During this HackJam you'll learn how to use [React Native Maps](https://github.c
 ## Getting Started
 ```bash
 git clone https://github.com/hackages/hackcamp.react-native.git
-git checkout hackjam-4
 yarn # Or npm install if you're one of those people ... Just kidding ;-)
 
 # It is recommended to launch the app using the EXPO XDE
