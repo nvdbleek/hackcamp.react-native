@@ -48,3 +48,6 @@ This one is really easy, you just give an array of coordinates and it'll draw a 
 Have the map always display all the trucks by fitting the map size to the provided trucks
 
 [hint](https://github.com/airbnb/react-native-maps/blob/master/example/examples/FitToCoordinates.js)
+
+### Pick an example from the doc!
+You can find a lot of examples of differnet usage of the map [here](https://github.com/airbnb/react-native-maps/tree/master/example/examples), just pick one and implement it ;)
