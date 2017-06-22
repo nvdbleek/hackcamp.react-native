@@ -41,11 +41,10 @@ Decorators are activated, you can use them ;-)
 ### Draw a line behind the trucks
 Use the doc found [here](https://github.com/airbnb/react-native-maps/blob/master/docs/polyline.md) to draw your polylines.
 This one is really easy, you just give an array of coordinates and it'll draw a polyline that follow the coordinates.
-Hint:
->! Store the x last positions of the trucks in an higher order or a reducer and draw polylines using them 
+
+[spoiler](https://gist.github.com/anonymous/5765fa68c620e37fe02c46cbfae9c997)
 
 ### Fit the map to the provided trucks coordinates
 Have the map always display all the trucks by fitting the map size to the provided trucks
 
-hint
->! [https://github.com/airbnb/react-native-maps/blob/master/example/examples/FitToCoordinates.js](https://github.com/airbnb/react-native-maps/blob/master/example/examples/FitToCoordinates.js)
+[hint](https://github.com/airbnb/react-native-maps/blob/master/example/examples/FitToCoordinates.js)
