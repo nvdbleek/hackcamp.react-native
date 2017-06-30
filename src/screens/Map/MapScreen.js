@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {Text} from 'react-native';
+import {Text, View, Animated } from 'react-native';
+import {Banner} from "../../components/Banner";
+import {globalStyles} from "../../styles/globalStyles";
 import {MapView} from 'expo';
 import {connect} from 'react-redux';
 import {ViewStyle} from "react-native";
@@ -36,11 +38,45 @@ const mapStateToProps = (state) => ({
 });
 
 @connect(mapStateToProps)
-@exampleHigherOrder
+// @exampleHigherOrder
 export class MapScreen extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      coordinate: new MapView.AnimatedRegion({
+        latitude: 50.8410376004502,
+        longitude: 4.359752589212838,
+      }),
+    };
+  }
+
   render() {
     return (
-      <Text style={{flex: 9}}>Not a map</Text>
+      <View style={{flex: 9}}>
+        <Banner />
+        <MapView style={{flex:9}} initialRegion={initialRegion}>
+        {
+          this.props.trucks.map(truck => {
+            return <MapView.Marker
+              key={truck.uuid}
+              coordinate={truck.coordinate}
+              title={truck.name}
+              image={images[truck.color]}
+            />
+          })
+        }
+        {
+          this.props.trucks.map(truck => {
+            return <MapView.Polyline 
+                      key={truck.uuid}
+                      coordinates={truck.coordinateHistory}
+                      strokeWidth={2}/>
+          })
+        }
+        </MapView>
+      </View>
     );
   }
 }
